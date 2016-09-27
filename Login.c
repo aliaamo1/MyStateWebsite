@@ -75,7 +75,7 @@ int main()
                         }fileData;
 
         char buf[1000];
-        //char *uName="aliaamo";
+        
         FILE *ptr;
 
          ptr=fopen("members.csv", "r");
@@ -96,7 +96,7 @@ int main()
                 tok=strtok(NULL, ",");
                 fileData.friends=tok;
 
-                //      printf("i'm alive");
+        
                       if(strcmp(fileData.uname,formData.usernameEntered)==0)
                  {
                         //printf("User found");
@@ -121,11 +121,7 @@ int main()
 
 
         }
-               // printf("<br>File data password: %s<br>", fileData.pword);
-               // printf("<br>Form data password: %s<br>", formData.passWordEntered);
-
-               // printf("<br>File data username: %s<br>", fileData.uname);
-               // printf("<br>Form data username: %s<br>", formData.usernameEntered);
+              
                        if((ufound!=1)&&(pfound!=1))
         {
         printf("User NOT found.");
@@ -137,17 +133,12 @@ int main()
         {
         printf("<h3> You have successfully logged in! </h3>");
         printf("<form name=input action=http://www.cs.mcgill.ca/~amohar/cgi-bin/pyth.py method=get>");
-         // printf("<input type=text name=ter>");
+         
         printf("<input type=hidden name=sessionID value=%s>", formData.usernameEntered);
         printf("<input type=submit value=TopicsPage>");
         }
 
-//      int a =0;
-//      while(fileData.uname[a]!='\0')
-//      {
-//              printf("%c",fileData.uname[a]);
-//              a++;
-//      }
+
 }
              printf("<br>");
                 printf("</html>");
